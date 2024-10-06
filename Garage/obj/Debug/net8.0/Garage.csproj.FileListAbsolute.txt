@@ -1,0 +1,14 @@
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/Garage.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/Garage.AssemblyInfoInputs.cache
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/Garage.AssemblyInfo.cs
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/Garage.csproj.CoreCompileInputs.cache
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/bin/Debug/net8.0/Garage
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/bin/Debug/net8.0/Garage.deps.json
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/bin/Debug/net8.0/Garage.runtimeconfig.json
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/bin/Debug/net8.0/Garage.dll
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/bin/Debug/net8.0/Garage.pdb
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/Garage.dll
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/refint/Garage.dll
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/Garage.pdb
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/Garage.genruntimeconfig.cache
+/Users/gayathrigeetha/Lexicon-Training/Garage_Task5/Garage/obj/Debug/net8.0/ref/Garage.dll
