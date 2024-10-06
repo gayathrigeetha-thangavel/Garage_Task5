@@ -17,6 +17,10 @@ public class Garage<T> : IGarageHandler<T>, IEnumerable<T> where T  : Vehicle
 
     UserValidation userValidation;
 
+    ConsoleMessage consoleMessage;
+
+    GarageHandler vehiclesHandler =new GarageHandler();
+
     //constructor for the garage class
     public Garage(int maxCapacity)
     {
@@ -24,6 +28,7 @@ public class Garage<T> : IGarageHandler<T>, IEnumerable<T> where T  : Vehicle
         vehicles = new T[maxCapacity];
         count = 0;
         userValidation = new UserValidation();
+        consoleMessage = new ConsoleMessage();
     }
 
 
@@ -45,7 +50,7 @@ public class Garage<T> : IGarageHandler<T>, IEnumerable<T> where T  : Vehicle
 
         if (string.IsNullOrWhiteSpace(vehicleRegNumber.ToString()))
         {
-            userValidation.PrintMessage("Invalid Registration number", "error");
+            consoleMessage.PrintMessage("Invalid Registration number", "error");
             return false;
         }
         else
@@ -70,7 +75,7 @@ public class Garage<T> : IGarageHandler<T>, IEnumerable<T> where T  : Vehicle
                         }
                         else
                         {
-                            userValidation.PrintMessage("Error:Vehicle is not found", "error");
+                            consoleMessage.PrintMessage("Error:Vehicle is not found", "error");
                         }
                     }
                 }
@@ -80,7 +85,7 @@ public class Garage<T> : IGarageHandler<T>, IEnumerable<T> where T  : Vehicle
             }
             catch (Exception ex)
             {
-                userValidation.PrintMessage($"Error: {ex.Message})", "error");
+                consoleMessage.PrintMessage($"Error: {ex.Message})", "error");
             }
         }
         return false;

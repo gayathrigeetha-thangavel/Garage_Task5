@@ -1,11 +1,9 @@
-
-
-using System.Data;
-using System.Security.AccessControl;
 using System.Text.RegularExpressions;
 
 public class UserValidation
 {
+
+    ConsoleMessage consoleMessage = new ConsoleMessage();
     internal bool ValidateInteger(int inputNumber)
     {
         if (inputNumber <= 0)
@@ -34,7 +32,7 @@ public class UserValidation
         bool isValid = ValidateVehicleType(vehicle.VehicleCategory);
         if (!isValid)
         { 
-            PrintMessage("Vehicle type should not be null.", "error");
+            consoleMessage.PrintMessage("Vehicle type should not be null.", "error");
         }
         return true;
     }
@@ -87,20 +85,6 @@ public class UserValidation
     } 
 
 
-    internal void PrintMessage(string message, string messageType)
-    {
-        if(messageType == "error")
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(message+"\n");
-            Console.ResetColor();
-        }
-        else if(messageType == "success")
-        {
-            Console.ForegroundColor= ConsoleColor.Green;
-            Console.WriteLine(message+"\n");
-            Console.ResetColor();
-        }
-    }
+    
 
 }

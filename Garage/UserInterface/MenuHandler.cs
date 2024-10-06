@@ -6,6 +6,8 @@ public class MenuHandler : Vehicle
     int garageCapacity = 0;
     UserValidation userValidation = new UserValidation();
 
+    ConsoleMessage consoleMessage= new ConsoleMessage();
+
     Garage<Vehicle> vehicleGarage = new Garage<Vehicle>(0);
 
     Vehicle vehicle = new Vehicle();
@@ -26,7 +28,7 @@ public class MenuHandler : Vehicle
             }
             else
             {
-                Console.WriteLine("Garage is empty");
+                consoleMessage.PrintMessage("Garage is empty","error");
             }
         }
         catch(Exception ex)
@@ -95,7 +97,7 @@ public class MenuHandler : Vehicle
             Console.WriteLine($"{vehicle.VehicleName} successfully added to the parking\n"); 
         }
         else {
-            Console.WriteLine("Parking is full\n");   
+            consoleMessage.PrintMessage("Parking is full\n","info");
         }
     }
 
@@ -127,10 +129,10 @@ public class MenuHandler : Vehicle
         userValidation.ValidateRegNumber(inputRegNumber);
         bool isVehicleRemoved = vehicleGarage.RemoveVehicle(inputRegNumber);
         if(isVehicleRemoved) {
-            userValidation.PrintMessage($"{inputRegNumber} was removed.", "success");
+            consoleMessage.PrintMessage($"{inputRegNumber} was removed.", "success");
         }
         else{
-            userValidation.PrintMessage("Invalid vehicle format","error");
+            consoleMessage.PrintMessage("Invalid vehicle format","error");
         }
     }
 
@@ -154,7 +156,7 @@ public class MenuHandler : Vehicle
             SearchAndListTheVehicleByType(inputVehicleType);
         }
         else {
-            userValidation.PrintMessage("Invalid vehicle type", "error");
+            consoleMessage.PrintMessage("Invalid vehicle type", "error");
         }
     }
 
@@ -174,6 +176,8 @@ public class MenuHandler : Vehicle
         }
     }
 
+
+    // Main menu: case 5: List all the vehicle that matches searching by color of the vehicle and its wheel count
     internal void SearchVehiclesByColorAndWheelCount()
     {
         List<Vehicle> mySearchvehicles = new List<Vehicle>();
@@ -205,11 +209,11 @@ public class MenuHandler : Vehicle
     {
        if (!userValidation.ValidateString(inputColor))
         {
-            userValidation.PrintMessage("Color should not be null","error");
+            consoleMessage.PrintMessage("Color should not be null","error");
         }
         if (!userValidation.ValidateInteger(inputWheelCount))
         {
-            userValidation.PrintMessage("Wheel count should not be zero", "error");
+            consoleMessage.PrintMessage("Wheel count should not be zero", "error");
         }
     }
 }
